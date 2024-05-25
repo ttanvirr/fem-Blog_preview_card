@@ -1,0 +1,114 @@
+@font-face {
+    font-family: "Figtree";
+    src: url(../assets/fonts/Figtree-VariableFont_wght.ttf) format("truetype");
+    font-weight: 100 900;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Figtree";
+    src: url(../assets/fonts/Figtree-Italic-VariableFont_wght.ttf)
+        format("truetype");
+    font-weight: 100 900;
+    font-style: italic;
+}
+
+:root {
+    --yellowish: hsl(47, 88%, 63%);
+    --whitish: hsl(0, 0%, 100%);
+    --grayish: hsl(0, 0%, 50%);
+    --blackish: hsl(0, 0%, 7%);
+
+    /* Site specific colors */
+    --primary-color: var(--yellowish);
+    --bg-body: var(--yellowish);
+    --bg-whitish: var(--whitish);
+    --color-body: var(--grayish);
+    --color-heading: var(--blackish);
+
+    /* Site specific typography */
+    --ff-body: "Figtree", sans-serif;
+    --fw-semi-bold: 500;
+    --fw-bold: 800;
+
+    --radius-lg: 1.5rem;
+    --radius-md: 1rem;
+    --radius-sm: 0.5rem;
+}
+
+/* Resets and Global styles */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--ff-body);
+    line-height: 1.2;
+    background-color: var(--bg-body);
+    color: var(--color-body);
+}
+
+h1 {
+    color: var(--color-heading);
+    font-weight: var(--fw-bold);
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    max-width: 375px;
+    padding: 1.5rem;
+    background-color: var(--bg-whitish);
+    border-radius: var(--radius-lg);
+}
+
+.card .illustration img {
+    border-radius: var(--radius-md);
+}
+
+a,
+a:visited {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    font-weight: var(--fw-bold);
+    background-color: var(--primary-color);
+    color: var(--color-heading);
+}
+
+.card .date {
+    color: var(--color-heading);
+    font-size: 0.8rem;
+    font-weight: var(--fw-semi-bold);
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.author .avatar {
+    width: 2rem;
+}
+
+.author .name {
+    color: var(--color-heading);
+    font-weight: var(--fw-bold);
+}
